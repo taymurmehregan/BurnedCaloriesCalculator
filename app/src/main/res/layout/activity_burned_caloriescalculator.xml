@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".BurnedCaloriesCalculator">
+
+    <TextView
+        style="@style/TextView.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bmi"
+        android:id="@+id/BMILabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/weightDisplay"
+        android:layout_alignStart="@+id/heightLabel"
+        android:layout_marginTop="52dp" />
+
+    <TextView
+        style="@style/TextView.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:id="@+id/fahrenheitLabel"
+        android:layout_below="@+id/BMILabel"
+        android:layout_alignLeft="@+id/BMILabel"
+        android:layout_alignStart="@+id/BMILabel"
+        android:layout_marginTop="36dp" />
+
+    <TextView
+        style="@style/TextView.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        android:id="@+id/heightLabel"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_below="@+id/weight"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="98dp" />
+
+    <TextView
+        style="@style/TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="150"
+        android:id="@+id/convertDisplay"
+        android:layout_alignTop="@+id/heightLabel"
+        android:layout_toRightOf="@+id/weightDisplay"
+        android:layout_toEndOf="@+id/weightDisplay"
+        android:layout_marginLeft="65dp"
+        android:layout_marginStart="65dp" />
+
+    <SeekBar
+        style="@style/PaddedWidget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weight"
+        android:maxWidth="30sp"
+        android:layout_below="@+id/weightDisplay"
+        android:layout_alignLeft="@+id/weightDisplay"
+        android:layout_alignStart="@+id/weightDisplay"
+        android:layout_marginTop="38dp"
+        android:layout_toStartOf="@+id/applyBut"
+        android:max="200"
+        android:progress="50"
+        android:layout_alignRight="@+id/convertDisplay"
+        android:layout_alignEnd="@+id/convertDisplay" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:id="@+id/applyButton"
+        android:layout_below="@+id/weight"
+        android:layout_alignRight="@+id/weightDisplay"
+        android:layout_alignEnd="@+id/weightDisplay" />
+
+    <TextView
+        style="@style/TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:id="@+id/weightDisplay"
+        android:layout_above="@+id/weight"
+        android:layout_toRightOf="@+id/applyButton"
+        android:layout_alignRight="@+id/weight"
+        android:layout_alignEnd="@+id/weight" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New RadioButton"
+        android:id="@+id/radioButton"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_below="@+id/heightLabel"
+        android:layout_alignLeft="@+id/heightLabel"
+        android:layout_alignStart="@+id/heightLabel"
+        android:layout_marginTop="38dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/radioButton"
+        android:layout_alignLeft="@+id/radioButton"
+        android:layout_alignStart="@+id/radioButton"
+        android:layout_marginTop="42dp" />
+
+</RelativeLayout>
